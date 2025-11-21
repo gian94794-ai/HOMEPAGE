@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Kanit", sans-serif;
+}
+h1{
+  text-shadow: 3px 3px 4px;
+}
+
+.container {
+  padding: 1rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem; 
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 6rem;
+ 
+}
+
+header .sparta-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .sparta-logo img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+header .sparta-logo a {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+header nav a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+header nav a::after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid #fff;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s linear;
+}
+
+header nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s linear;
+}
+
+header nav button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+header nav button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s linear;
+  z-index: 0;
+}
+
+header nav button:hover::after {
+  height: 100%;
+  top: initial;
+  bottom: 0;
+  transition: 0.3s linear;
+}
+
+header nav button span {
+  position: relative;
+  transition: color 0.3s linear;
+  z-index: 1;
+}
+
+header nav button:hover span {
+  color: #000000; 
+}
+
+header .hamburger-menu {
+  display: none;
+}
+
+  section {
+    min-height: 100vh;
+    background-image: url("background.jpg/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 220px; 
+  }
+  
+
+section .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+section .container .content h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+section .container .content p {
+  font-size: 20px;
+}
+
+section .container .content .action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+section .container .content .action .action-1 {
+  padding: 1rem 2rem;
+  background: transparent;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+section .container .content .action .action-1:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.2s linear;
+}
+
+section .container .content .action .action-2 {
+  padding: 1rem 2rem;
+  background: transparent;
+  color: #000;
+  background-color: #fff;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+section .container .content .action .action-2:hover {
+  background-color: #e4e4e4;
+  border: 3px solid #e4e4e4;
+  transition: 0.2s linear;
+}
+
+.cards {
+  width: 35%;
+  display: inline-block;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 4rem; 
+}
+
+.card {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 10px; 
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 200px; 
+}
+
+.card img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem; 
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 16px;
+}
+
+.card:hover {
+  transform: scale(1.2); /* Zoom in */
+  background-color: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+@media screen and (max-width: 1024px) {
+  header nav {
+    display: none;
+  }
+
+  header .hamburger-menu {
+    display: block;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section .container .content {
+    align-items: center;
+    width: 100%;
+  }
+
+  section .container .content h1,
+  section .container .content p {
+    text-align: center;
+  }
+
+  section .container .content p {
+    width: 85%;
+  }
+
+  .cards {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .card {
+    width: 30%;
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1rem 4rem;
+  }
+
+  header {
+    padding: 1rem 4rem;
+  }
+
+  section {
+    padding-top: 180px; 
+  }
+
+  section .container .content p {
+    width: 100%;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  section {
+    padding-top: 160px; 
+  }
+}
