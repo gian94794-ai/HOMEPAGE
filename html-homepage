@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="homepage.css" />
+  <title>DIGITAL LITERACY AND CYBERSECURITY</title>
+</head>
+
+<body>
+  <header>
+    <div class="sparta-logo">
+      <img src="images/sparta-logo.png" alt="logo" />
+    </div>
+
+    <nav>
+      <a href="#">HOME</a>
+      <a href="#">CONTACT</a>
+      <a href="#">CYSEC</a>
+      <a href="#">ABOUT US</a>
+      <button onclick="window.location.href='form.html'">
+        <span>SIGN OUT</span>
+      </button>
+    </nav>
+
+    <div class="hamburger-menu">
+      <svg
+        width="35px"
+        height="35px"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M4 18L20 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+        <path d="M4 12L20 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+        <path d="M4 6L20 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="content">
+        <h1><i>SPARTALEXIS</i></h1>
+        <p>
+          SPARTALEXIS is a fusion of two powerful ideas: Sparta, 
+          symbolizing strength, discipline, and resilience, and
+          Lexus, representing sophistication, innovation, and 
+          excellence. Together <span class="ellipsis">.........</span>
+          <a href="full-description.html" class="see-more">see more</a>
+        </p>
+        <div class="action">
+          <button class="action-1">DIGILIT</button>
+          <button class="action-2">CYSEC</button>
+        </div>
+      </div>
+
+    
+      <div class="cards">
+        <a href="digilit.html" class="card" onclick="window.location.href='digilit.html'">
+          <img src="cards.jpg/digilit.jpg" />
+    
+        </a>
+        <a href="cysec.html" class="card" onclick="window.location.href='cysec.html'">
+          <img src="cards.jpg/cysec.jpg"  />
+        
+        </a>
+        <a href="etiquette.html" class="card" onclick="window.location.href='etiquette.html'">
+          <img src="cards.jpg/netiquette.jpg"  />
+        
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
